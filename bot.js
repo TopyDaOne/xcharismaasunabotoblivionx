@@ -676,7 +676,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 var args = message.content.split(" ").slice(1);    
-if(message.content.startsWith(prefix + 'id2')) {
+if(message.content.startsWith(prefix + 'newid')) {
 var year = message.author.createdAt.getFullYear()
 var month = message.author.createdAt.getMonth()
 var day = message.author.createdAt.getDate()
