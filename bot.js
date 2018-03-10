@@ -621,7 +621,7 @@ m.sendMessage(args)
 
 client.on('message', message => {
     
-    if (message.content === "O") {
+    if (message.content === "!!O") {
         setInterval(function(){
         message.edit('**✱➼**')    
         message.edit('**✱➼ O**')    
