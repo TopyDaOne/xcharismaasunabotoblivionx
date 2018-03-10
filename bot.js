@@ -619,6 +619,23 @@ m.sendMessage(args)
 }
 });
 
+client.on('message', message => {
+    
+    if (message.content === "O") {
+        setInterval(function(){
+        message.edit('**✱➼**')    
+        message.edit('**✱➼ O**')    
+        message.edit('**✱➼ OB**')
+        message.edit('**✱➼ OBL**')
+        message.edit('**✱➼ OBLI**')
+        message.edit('**✱➼ OBLIV**')
+        message.edit('**✱➼ OBLIVI**')
+        message.edit('**✱➼ OBLIVION.**')
+    
+        }, 1000)
+    }
+    
+})
 
 client.on('message', message => {
      var prefix = "!!"
