@@ -676,7 +676,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 var args = message.content.split(" ").slice(1);    
-if(message.content.startsWith(prefix + 'id')) {
+if(message.content.startsWith(prefix + 'id2')) {
 var year = message.author.createdAt.getFullYear()
 var month = message.author.createdAt.getMonth()
 var day = message.author.createdAt.getDate()
@@ -699,9 +699,9 @@ y = `${z.presence.game.name}`;
 y = "No Playing... |💤.";
 }
 if (z.bot) {
-var w = 'بوت';
+var w = 'Bot';
 }else {
-var w = 'عضو';
+var w = 'Human';
 }
 let embed = new Discord.RichEmbed()
 .setColor("#502faf")
