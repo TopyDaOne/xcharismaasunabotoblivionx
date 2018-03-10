@@ -802,23 +802,6 @@ if(command === `${prefix}message`) {
 
 
 
-client.on('message', message => {
-      if (message.content.startsWith(prefix + '!!clear')) {
-        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`You dont have this perm[*MANAGE_MESSAGES*] `).catch(console.error);
-    message.delete()
-    if(!message.channel.guild) return;
-let args = message.content.split(" ").slice(1);
-
-  const messagecount = parseInt(args.join(' '));
-
-  message.channel.fetchMessages({
-  
-    limit: messagecount
-  
-}).then(messages => message.channel.bulkDelete(messages));
-};
-
-});
 
 client.on('message', message => {
     if(message.content == '!!members') {
@@ -926,6 +909,29 @@ message.channel.sendEmbed(cat);
    message.channel.send({embed});
       }
   });
+
+
+client.on("message", message => {
+ 
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix + "clear")) {
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **You Dont have prems**');
+        var msg;
+        msg = parseInt();
+      
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "Done | :white_check_mark: ",
+        color: 0x06DF00,
+        description: "The chat is cleared ",
+        footer: {
+          text: "! TopyDev"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+});
 
 
 client.on('message', message => {
