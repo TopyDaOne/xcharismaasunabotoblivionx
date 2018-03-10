@@ -9,5 +9,11 @@
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0"
+    "canvas":  "2.0.0"
+    "jimp":    "0.2.28"
+    "moment":  "2.10.0"
+    "ms":      "2.1.1"
+    "fs":      "0.0.1"
+    "sqlite":  "2.9.1"
   }
 }
