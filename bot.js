@@ -676,7 +676,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 var args = message.content.split(" ").slice(1);    
-if(message.content.startsWith(prefix + 'newid')) {
+if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
 var month = message.author.createdAt.getMonth()
 var day = message.author.createdAt.getDate()
@@ -712,7 +712,8 @@ let embed = new Discord.RichEmbed()
 .addField('📛| Ur Acc code:',"**#" +  `${z.discriminator}**`,true)
 .addField('**Created on  | 📆 **: ' ,year + "-"+ month +"-"+ day)    
 .addField("**Joined the server on | ⌚   :**", message.member.joinedAt.toLocaleString())    
-
+.addField(':spy:  Status ', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+.addField(':military_medal:  Roles ', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
 .addField('**⌚ | Full acc date:**', message.author.createdAt.toLocaleString())
 .addField("**Your last message | 💬  :**", message.author.lastMessage)            
 
@@ -782,25 +783,7 @@ if(command === `${prefix}message`) {
  }
 });
 
-client.on("message", msg => {
-           var prefix = "!!";
-  if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**:x: This command for servers only **');         
-      const embed = new Discord.RichEmbed();
-  embed.addField(":cloud_tornado:  Name ", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField(":id:  ID :", `**[ ${msg.author.id} ]**`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField(':spy:  Status ', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField(':satellite_orbital:   Playing ', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField(':military_medal:  Roles ', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-          .addField(':robot:  Is her/she bot', `**[ ${msg.author.client.toString().toUpperCase()} ]**`, true);
-      msg.channel.send({embed: embed})
-  }
-});
+
 
 client.on('message', message => {
       if (message.content.startsWith(prefix + '!!clear')) {
