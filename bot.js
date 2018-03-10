@@ -1282,6 +1282,29 @@ if (message.content.startsWith("!!add.r")) {
 });
 
 
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'welcome-leave');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
+        .addField(':loudspeaker: | welcome bro' , `Welcome to the server, ${member}`)
+        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| Your are the member',`${member.guild.memberCount}`)
+               
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' Server', `${member.guild.name}`,true)
+                                       
+     .setFooter("**SERVER NAME**")
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
+
+
 client.on('message', message => {
 
        if(message.content ===  "!!mutechannel") {
@@ -1299,7 +1322,7 @@ client.on('message', message => {
     if(message.content ===  "!!unmutechannel") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__The romm is unlocked__**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__The room is unlocked__**');
               message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: true
 
