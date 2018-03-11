@@ -1305,7 +1305,6 @@ client.on('message', ELJOKER => {
 Takeover Tag: ON |
 `)
 .setTimestamp()
-      .setFooter('TopyDev',ELJOKER.user.avatarURL)
 
         ELJOKER.channel.sendEmbed(embed);
     }
