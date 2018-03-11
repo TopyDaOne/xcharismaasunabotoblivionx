@@ -1304,13 +1304,33 @@ client.on("message", message => {
       
       .addField("Takeover Tag: ON |", )
       
-      .addField("CW Tag  𝒪𝒩🐉", )
+      .addField("**CW Tag  𝒪𝒩🐉**", )
       
 	    .addField("TopyDev ", )
 	    
 
   message.channel.sendMessage({embed});
 }
+});
+
+client.on('message', ELJOKER => {
+    if (ELJOKER.content === '!!tag-on') {
+   message.react("🅾")
+   message.react("🅽")
+
+
+        const embed = new Discord.RichEmbed()
+           .setColor('#7400ff')
+            .setDescription(`**Main tag : ๖ۣۜᎧn⚡️**
+**CW Tag  𝒪𝒩🐉**
+Takeover Tag: ON |
+`)
+.setTimestamp()
+      .setFooter('TopyDev',ELJOKER.user.avatarURL)
+
+        ELJOKER.channel.sendEmbed(embed);
+    }
+
 });
 
 	 
