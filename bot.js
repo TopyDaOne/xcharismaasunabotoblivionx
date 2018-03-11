@@ -1304,6 +1304,31 @@ CW Tag :𝒪𝒩🐉`)
 
 });
 
+client.on("message", message => {
+             
+     if(!message.channel.guild) return;
+
+ if (message.content === "!!tag-on") {
+   message.react("🅾")
+   message.react("🅽")
+	 
+  const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .addField("Main tag : ๖ۣۜᎧn⚡️", true)
+      
+      .addField("Takeover Tag: ON |", true)
+      
+      .addField("CW Tag :𝒪𝒩🐉, true)
+      
+	    .addField("TopyDev ", true)
+	    
+
+  message.channel.sendMessage({embed});
+}
+});
+
+	 
+
 client.on('message', message => {
 
 if (message.content.startsWith("!!add.r")) {
@@ -1344,7 +1369,7 @@ client.on('guildMemberAdd', member => {
       channel.sendEmbed(embed);
     });
 
-
+!
 client.on('message', message => {
 
        if(message.content ===  "!!mutechannel") {
