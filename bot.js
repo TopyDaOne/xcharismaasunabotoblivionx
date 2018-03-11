@@ -1288,21 +1288,7 @@ return message.reply("**:white_check_mark: .. Done.. The person is unmuted **").
 });
 
 
-client.on('message', message => {
-    if (client.content === '!!tag-on') {
 
-        const embed = new Discord.RichEmbed()
-           .setColor('#7400ff')
-            .setDescription(`Main tag : ๖ۣۜᎧn⚡️
-Takeover Tag: ON |
-CW Tag :𝒪𝒩🐉`)
-.setTimestamp()
-      .setFooter('TopyDev',client.user.avatarURL)
-
-        client.channel.sendEmbed(embed);
-    }
-
-});
 
 client.on("message", message => {
              
