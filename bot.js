@@ -1304,7 +1304,7 @@ client.on("message", message => {
       
       .addField("Takeover Tag: ON |", true)
       
-      .addField("CW Tag :𝒪𝒩🐉, true)
+      .addField("CW Tag : 𝒪𝒩🐉, true)
       
 	    .addField("TopyDev ", true)
 	    
