@@ -1288,7 +1288,7 @@ return message.reply("**:white_check_mark: .. Done.. The person is unmuted **").
 });
 
 
-client.on('message', client => {
+client.on('message', message => {
     if (client.content === '!!tag-on') {
 
         const embed = new Discord.RichEmbed()
