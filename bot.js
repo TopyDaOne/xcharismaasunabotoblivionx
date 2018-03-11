@@ -1300,13 +1300,13 @@ client.on("message", message => {
 	 
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .addField("Main tag : ๖ۣۜᎧn⚡️", true)
+      .addField("Main tag : ๖ۣۜᎧn⚡️", )
       
-      .addField("Takeover Tag: ON |", true)
+      .addField("Takeover Tag: ON |", )
       
-      .addField("CW Tag : 𝒪𝒩🐉, true)
+      .addField("CW Tag  𝒪𝒩🐉", )
       
-	    .addField("TopyDev ", true)
+	    .addField("TopyDev ", )
 	    
 
   message.channel.sendMessage({embed});
