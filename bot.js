@@ -1290,33 +1290,12 @@ return message.reply("**:white_check_mark: .. Done.. The person is unmuted **").
 
 
 
-client.on("message", message => {
-             
-     if(!message.channel.guild) return;
 
- if (message.content === "!!tag-on") {
-   message.react("🅾")
-   message.react("🅽")
-	 
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .addField("Main tag : ๖ۣۜᎧn⚡️", )
-      
-      .addField("Takeover Tag: ON |", )
-      
-      .addField("**CW Tag  𝒪𝒩🐉**", )
-      
-	    .addField("TopyDev ", )
-	    
-
-  message.channel.sendMessage({embed});
-}
-});
 
 client.on('message', ELJOKER => {
     if (ELJOKER.content === '!!tag-on') {
-   message.react("🅾")
-   message.react("🅽")
+  ELJOKER.react("🅾")
+  ELJOKER.react("🅽")
 
 
         const embed = new Discord.RichEmbed()
