@@ -1918,34 +1918,7 @@ if ((content.split(' ')[0] == prefix + "gif")) {
 
 			});
 
-		})
-
-
-		if ((content.split(' ')[0] == prefix + "img")) {
-		sb = content.substring(5)
-		if (sb.match("porn") || sb.match("yiff") || sb.match("sex") || sb.match("nude") || sb.match("scat") || sb.match("shit") ) {
-			m.reply("no.")
-			return
-			
-		}  
-			msg = m.channel.sendMessage("```Searching...```").then((msg) =>
-				gis(sb).then(function logResults(results) {
-					results = results.slice(0, 20)
-					img = results[Math.floor(Math.random() * results.length)]
-					if (img == undefined) {
-						msg.edit("```An Error Occured!```")
-						return
-					}
-					msg.edit(img)
-				}).catch(function(err) {
-					console.log(err);
-					msg.edit("```An Error Occured!```")
-				}));
-
-		return}
-
-	}
-
+		
 
 
 
