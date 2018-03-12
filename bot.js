@@ -1918,7 +1918,7 @@ if ((content.split(' ')[0] == prefix + "gif")) {
 
 			});
 
-		}
+		})
 
 
 		if ((content.split(' ')[0] == prefix + "img")) {
