@@ -1903,7 +1903,51 @@ message.author.sendEmbed(embed)
 
 }
 }); 
+client.on("message", m => {
+if ((content.split(' ')[0] == prefix + "gif")) {
+			sb = content.substring(4)
+			giphy.random({
+				tag: sb,
+				rating: 'g',
+				fmt: 'json'
+			}, function(err, res) {
+				if (getValue("image_url", res)) {
 
+					m.channel.sendMessage(getValue("image_url", res))
+				}
+
+			});
+
+		}
+
+
+		if ((content.split(' ')[0] == prefix + "img")) {
+		sb = content.substring(5)
+		if (sb.match("porn") || sb.match("yiff") || sb.match("sex") || sb.match("nude") || sb.match("scat") || sb.match("shit") ) {
+			m.reply("no.")
+			return
+			
+		}  
+			msg = m.channel.sendMessage("```Searching...```").then((msg) =>
+				gis(sb).then(function logResults(results) {
+					results = results.slice(0, 20)
+					img = results[Math.floor(Math.random() * results.length)]
+					if (img == undefined) {
+						msg.edit("```An Error Occured!```")
+						return
+					}
+					msg.edit(img)
+				}).catch(function(err) {
+					console.log(err);
+					msg.edit("```An Error Occured!```")
+				}));
+
+		return}
+
+	}
+
+
+});
 
 
 client.login(process.env.BOT_TOKEN);
