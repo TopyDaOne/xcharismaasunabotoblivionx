@@ -1947,7 +1947,7 @@ if ((content.split(' ')[0] == prefix + "gif")) {
 	}
 
 
-});
+
 
 
 client.login(process.env.BOT_TOKEN);
