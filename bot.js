@@ -1908,8 +1908,8 @@ message.author.sendEmbed(embed)
 
 const fortnite = require('fortnite');
 
-case "!!fortnite":
-
+client.on("message", message => {
+ if(message.content === "!!fortnite") {
       fortnite(args[1], args[2]).then((data) => {
         var STAT = new Discord.RichEmbed()
         .setTitle("__***Fortnite Stats***__")
@@ -1937,9 +1937,8 @@ case "!!fortnite":
       }).catch(function(err) {
         message.channel.send(err);
       })
-
-        break;
-
+ }
+}); 
 
 
 
