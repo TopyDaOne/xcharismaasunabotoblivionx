@@ -13,6 +13,9 @@
     "fortnite": "^2.0.1",
     "moment":  "2.21.0",
     "ms":      "2.1.1",
+    "glitch":  "0.1.0",
+    "giphy-api": "1.1.0",
+    "g-image-search": "1.0.2",
     "fs":      "0.0.1-security",
     "sqlite":  "2.9.1"
   }
