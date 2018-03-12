@@ -1916,7 +1916,7 @@ if ((content.split(' ')[0] == prefix + "gif")) {
 					m.channel.sendMessage(getValue("image_url", res))
 				}
 
-			});
+			
 
 		
 
