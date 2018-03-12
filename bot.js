@@ -1903,22 +1903,6 @@ message.author.sendEmbed(embed)
 
 }
 }); 
-client.on("message", m => {
-if ((content.split(' ')[0] == prefix + "gif")) {
-			sb = content.substring(4)
-			giphy.random({
-				tag: sb,
-				rating: 'g',
-				fmt: 'json'
-			}, function(err, res) {
-				if (getValue("image_url", res)) {
-
-					m.channel.sendMessage(getValue("image_url", res))
-				}
-
-			
-
-		
 
 
 
