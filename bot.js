@@ -588,12 +588,14 @@ if(message.content == prefix + 'slis') {
          if(!message.author.id === '244904169742270465') return;
          if(!message.author.id === '244904169742270465') return;
 var gimg;
+var gowner;
 var gname;
 var gmemb;
 var gbots;
 var groles;
 var servers = client.guilds;
 servers.forEach((g)=>{
+gowner = g.owner;
 gname = g.name;
 gimg = g.iconURL;
 gmemb = g.members.size;
@@ -602,11 +604,27 @@ message.channel.send(`
 **-------------------------**
   Server Name : **${gname}**
   Server MemberCount : **${gmemb} **
+  Server Owner : **${gowner} **
   **---------------------------**
         `);
 }) 
 }
 });
+
+client.on('message', message => {
+
+  if (message.content.startsWith(prefix + "contact")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.users.get("423234038204203009").send(
+      "\n" + "**" + "● السيرفر :" + "**" +
+      "\n" + "**" + "» " + message.guild.name + "**" +
+      "\n" + "**" + " ● المرسل : " + "**" +
+      "\n" + "**" + "» " + message.author.tag + "**" +
+      "\n" + "**" + " ● الرسالة : " + "**" +
+      "\n" + "**" + args + "**")
+  }
+  });
 
 client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
