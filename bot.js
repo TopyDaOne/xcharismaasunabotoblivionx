@@ -1301,8 +1301,8 @@ return message.reply("**:white_check_mark: .. Done.. The person is unmuted **").
 
 client.on('message', ELJOKER => {
     if (ELJOKER.content === '!!tag-on') {
-  ELJOKER.react("🅾")
-  ELJOKER.react("🅽")
+  ELJOKER.react("🇴")
+  ELJOKER.react("🇳")
 
 
         const embed = new Discord.RichEmbed()
