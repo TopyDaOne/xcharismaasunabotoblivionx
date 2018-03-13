@@ -558,8 +558,8 @@ return;
 
 client.on('message', message => {
 if(message.content == prefix + 'slist') {
-         if(!message.author.id === '323885452207587329') return;
-         if(!message.author.id === '334435543851204618') return;
+         if(!message.author.id === '244904169742270465') return;
+         if(!message.author.id === '244904169742270465') return;
 var gimg;
 var gname;
 var gmemb;
