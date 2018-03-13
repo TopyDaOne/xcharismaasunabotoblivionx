@@ -611,20 +611,6 @@ message.channel.send(`
 }
 });
 
-client.on('message', message => {
-
-  if (message.content.startsWith(prefix + "contact")) {
-  if (!message.channel.guild) return;
-  let args = message.content.split(" ").slice(1).join(' ');
-  client.users.get("423234038204203009").send(
-      "\n" + "**" + "● السيرفر :" + "**" +
-      "\n" + "**" + "» " + message.guild.name + "**" +
-      "\n" + "**" + " ● المرسل : " + "**" +
-      "\n" + "**" + "» " + message.author.tag + "**" +
-      "\n" + "**" + " ● الرسالة : " + "**" +
-      "\n" + "**" + args + "**")
-  }
-  });
 
 client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
