@@ -565,15 +565,18 @@ var gname;
 var gmemb;
 var gbots;
 var groles;
+var gowner;
 var servers = client.guilds;
 servers.forEach((g)=>{
 gname = g.name;
+gowner = g.owner;
 gimg = g.iconURL;
 gmemb = g.members.size;
 let serv = new Discord.RichEmbed()
 .setAuthor(gname,gimg)
 .setThumbnail(gimg)
 .addField('Server Member Count',gmemb = g.members.size)
+.addField('Server Owner',gowner = g.owner)
 .setColor('RANDOM')
 message.channel.send(`
 
