@@ -628,7 +628,7 @@ m.sendMessage(args)
 
 client.on('message', message => {
     
-    if (message.content === "!!O") {
+    if (message.content === "O") {
         setInterval(function(){
         message.edit('**✱➼**')    
         message.edit('**✱➼ O**')    
@@ -1304,17 +1304,10 @@ client.on('message', ELJOKER => {
   ELJOKER.react("🇴")
   ELJOKER.react("🇳")	    
   
+ELJOKER.channel.send('"`"+Main tag : ๖ۣۜᎧn⚡️| CW Tag  𝒪𝒩🐉 |Takeover Tag: ON | +"`"`') 
 
+        
 
-        const embed = new Discord.RichEmbed()
-           .setColor('#7400ff')
-            .setDescription(`"``"Main tag : ๖ۣۜᎧn⚡️**
-**CW Tag  𝒪𝒩🐉**
-Takeover Tag: ON |``
-`)
-.setTimestamp()
-
-        ELJOKER.channel.sendEmbed(embed);
     }
 
 });
