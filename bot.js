@@ -1308,9 +1308,9 @@ client.on('message', ELJOKER => {
 
         const embed = new Discord.RichEmbed()
            .setColor('#7400ff')
-            .setDescription(`**Main tag : ๖ۣۜᎧn⚡️**
+            .setDescription(`"``"Main tag : ๖ۣۜᎧn⚡️**
 **CW Tag  𝒪𝒩🐉**
-Takeover Tag: ON |
+Takeover Tag: ON |``
 `)
 .setTimestamp()
 
