@@ -1735,7 +1735,6 @@ __~~Oblivion  Bot~~__ By: ! Topy#8087
 
 ❖ !!avatar ➾  to see ur image profile
 
-❖ !!say  ➾  to repeat ur text
 
 ❖ !!embed   ➾  to repeat ur text in other way
 
