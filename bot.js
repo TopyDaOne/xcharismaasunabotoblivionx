@@ -1842,5 +1842,48 @@ message.author.sendEmbed(embed)
  message.channel.sendEmbed(embed);
      }
  });
+var knock = function() {
+    var joke = jokes[Math.floor(Math.random() * jokes.length)]
+    return formatJoke(joke)
+}
 
+function formatJoke(joke) {
+    return [
+        'Knock, knock.',
+        'Who’s there?',
+        joke.name + '.',
+        joke.name + ' who?',
+        joke.name + ' ' + joke.answer
+    ].join('\n')
+}
+    client.on('message', (message) => {
+        if (message.content.includes('!!knock')) {
+            const msg = message.content.split(' ');
+                message.reply(knock());
+
+        }
+    });
+var jokes = [
+    { name: 'Dozen', answer: 'anybody want to let me in?' },
+    { name: 'Avenue', answer: 'knocked on this door before?' },
+    { name: 'Ice Cream', answer: 'if you dont let me in!' },
+    { name: 'Adore', answer: 'is between us. Open up!' },
+    { name: 'Lettuce', answer: 'in. Its cold out here!' },
+    { name: 'Mikey', answer: 'doesnt fit through this keyhole' },
+    { name: 'Canoe', answer: 'help me with my homework?' },
+    { name: 'Orange', answer: 'you going to let me in?' },
+    { name: 'Anee', answer: 'one you like?'},
+    { name: 'Iva', answer: 'a sore hand from knocking!' },
+    { name: 'Needle', answer: 'little money for the movies.' },
+    { name: 'Avenue', answer: 'knocked on this door before?' }, 
+    { name: 'Adore', answer: 'is between us. Open up!' },
+    { name: 'King Tut', answer: '-key fried chicken!' },
+    { name: 'Noah', answer: 'good place we can get something to eat?' },
+    { name: 'Robin', answer: 'the piggy bank again.'},
+    { name: 'Dwayne', answer: 'the bathtub, It’s overflowing!' },
+    { name: 'Imma', answer: 'gettin’ old open the door!' },
+    { name: 'Justin', answer: 'time for dinner.'},
+    { name: 'Luke', answer: 'through the the peep hole and find out.'},
+    { name: 'Lenny', answer: '( ͡° ͜ʖ ͡°)'}
+]
 client.login(process.env.BOT_TOKEN);
