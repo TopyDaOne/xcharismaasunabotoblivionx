@@ -1692,8 +1692,6 @@ __~~Oblivion  Bot~~__ By: ! Topy#8087
 
 ❖ !!invite ➾ server invite link
 
-❖ !!own ➾ bot owner
-
 ❖ !!id ➾ your id
 
 ❖ !!avatar ➾ your avatar account
@@ -1710,12 +1708,10 @@ __~~Oblivion  Bot~~__ By: ! Topy#8087
 
 ❖ !!invite ➾ bot invite link
 
-❖ !!draw    ➾  to copy ur text into drawing    
 
 ❖ !!avatar ➾  to see ur image profile
 
 
-❖ !!embed   ➾  to repeat ur text in other way
 
 ❖ !!calculate  ➾  to calculate a method   ex: **!!calculate 1 + 1 **
 
