@@ -1708,6 +1708,7 @@ __~~Oblivion  Bot~~__ By: ! Topy#8087
 
 ❖ !!invite ➾ bot invite link
 
+❖ !!knock  ➾ play the knock game xd
 
 ❖ !!avatar ➾  to see ur image profile
 
