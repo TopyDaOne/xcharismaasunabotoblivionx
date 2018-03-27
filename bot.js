@@ -1298,7 +1298,7 @@ if (message.content.startsWith("!!add.r")) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome-leave');
+    let channel = member.guild.channels.find('bot-hell', 'welcome-leave');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
