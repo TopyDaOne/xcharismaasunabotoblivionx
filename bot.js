@@ -1298,7 +1298,7 @@ if (message.content.startsWith("!!add.r")) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('bot-hell', 'welcome-leave');
+    let channel = member.guild.channels.find('name', 'welcome-leave', 'bot-hell');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -1313,7 +1313,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' Server', `${member.guild.name}`,true)
                                        
-     .setFooter("**SERVER NAME**")
+     .setFooter("**Oblivion**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
