@@ -1610,7 +1610,6 @@ client.on('ready', function(){
 
 client.on("message", message => {
              
-     if(!message.channel.guild) return;
 
  if (message.content === "!!help") {
    message.react("😜")
