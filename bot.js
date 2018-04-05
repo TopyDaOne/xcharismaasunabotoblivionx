@@ -1134,7 +1134,6 @@ if(!message.channel.guild) return;
 client.on('message' , message => {
 
     if (message.content === "!!invite") {
-        if(!message.channel.guild) return message.reply('**The command only for servers **');
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)     
