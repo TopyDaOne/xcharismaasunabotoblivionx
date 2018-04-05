@@ -1298,7 +1298,7 @@ if (message.content.startsWith("!!add.r")) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome-leave', 'bot-hell');
+    let channel = member.guild.channels.find('name', 'welcome-leave');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -1348,6 +1348,23 @@ client.on('message', message => {
                 
          
        
+});
+
+
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'roleID')) {
+let args = message.content.split(" ").slice(1);
+let role = message.mentions.roles.first(); 
+if (!role) {
+  }
+ var embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.addField(`Role Name`, `${role.name}`,true)
+.addField(`Members Count`, `${role.members.size}`,true)
+.addField(`Created At`, `${role.createdAt.toUTCString()}`,true)
+.addField(`Role ID`, `${role.id}`,true)
+message.channel.send(embed);
+ }
 });
 
 
