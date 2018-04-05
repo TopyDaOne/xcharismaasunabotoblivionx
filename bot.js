@@ -1349,9 +1349,9 @@ client.on('message', message => {
        
 });
 
-
+var profix = "!!"
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'roleID')) {
+if (message.content.startsWith(profix + 'roleID')) {
 let args = message.content.split(" ").slice(1);
 let role = message.mentions.roles.first(); 
 if (!role) {
